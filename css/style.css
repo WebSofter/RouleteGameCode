@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21.09.2017, 0:10:34
+    Author     : WebSofter
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.card:nth-child(odd) {
+  background: red;
+}
+
+.card:nth-child(even) {
+  background: blue;
+}
+
+.cardList {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card {
+  display: inline-block;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  font-family: monospace;
+  font-size: 2em;
+  color: #fff;
+  margin: 0 auto;
+}
+
+#container {
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.cardcontainer {}
+
+.cardList::before,
+.cardList::after {
+  content: '';
+  display: block;
+  z-index: 100;
+  width: 0px;
+  height: 0px;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.cardList::before {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  border-top: 12px solid #c3c3c3;
+}
+
+.cardList::after {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  border-bottom: 12px solid #c3c3c3;
+}
+
+.cardList {
+  margin: 0 auto;
+}
+
+button {
+  margin: 10px;
+  padding: 8px;
+  font-family: monospace;
+}
